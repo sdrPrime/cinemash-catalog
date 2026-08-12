@@ -1,0 +1,29 @@
+name: Refresh catalog
+on:
+  schedule:
+    - cron: "0 3 1 1,4,7,10 *"   # 03:00 UTC, 1st of Jan/Apr/Jul/Oct — slides the 50-year window one quarter
+  workflow_dispatch: {}           # manual "Run workflow" button for the first build / anytime
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build catalog.json
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: |
+          echo "TMDB_API_KEY=$TMDB_API_KEY" > .env
+          python3 build_catalog.py
+          rm .env
+      - name: Commit if changed
+        run: |
+          git config user.name "catalog-bot"
+          git config user.email "actions@github.com"
+          git add catalog.json
+          git diff --cached --quiet || git commit -m "Quarterly catalog refresh $(date -u +%F)"
+          git push
