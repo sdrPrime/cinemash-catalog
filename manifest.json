@@ -1,23 +1,62 @@
 {
+  "id": "cinemash",
   "name": "CINEMASH",
   "short_name": "CINEMASH",
-  "description": "Guess the movie. Beat the clock.",
+  "description": "Guess Bollywood & Hollywood movies letter by letter — beat the clock, climb 150 levels, or challenge a friend in pass-and-play.",
   "start_url": "./cinemash.html",
   "scope": "./",
   "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
   "orientation": "portrait",
+  "dir": "ltr",
+  "lang": "en",
+  "categories": [
+    "games",
+    "entertainment"
+  ],
   "background_color": "#ff2e88",
   "theme_color": "#1c0530",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "shot-landing.png",
+      "sizes": "824x1830",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Home — pick your mode"
+    },
+    {
+      "src": "shot-gameplay.png",
+      "sizes": "810x1800",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Guess the movie before the clock runs out"
     }
   ]
 }
