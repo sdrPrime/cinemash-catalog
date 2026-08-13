@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sdrprime.cinemash",
+      "sha256_cert_fingerprints": [
+        "EC:E6:3B:44:29:3C:1E:75:C4:F7:3A:8C:74:47:3B:A3:5A:65:7A:06:D5:8B:70:52:5B:E4:68:E1:45:C6:6A:54"
+      ]
+    }
+  }
+]
