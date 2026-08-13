@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.sdrprime.cinemash",
       "sha256_cert_fingerprints": [
-        "EC:E6:3B:44:29:3C:1E:75:C4:F7:3A:8C:74:47:3B:A3:5A:65:7A:06:D5:8B:70:52:5B:E4:68:E1:45:C6:6A:54"
+        "EC:E6:3B:44:29:3C:1E:75:C4:F7:3A:8C:74:47:3B:A3:5A:65:7A:06:D5:8B:70:52:5B:E4:68:E1:45:C6:6A:54",
+        "36:0E:78:AE:AD:35:9F:47:E9:FF:C6:18:98:A1:D5:D8:C9:4C:96:0C:E4:8A:31:6D:B6:5C:E0:95:6D:D1:20:D6"
       ]
     }
   }
