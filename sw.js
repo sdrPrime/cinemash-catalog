@@ -1,5 +1,5 @@
 // CINEMASH service worker — same-origin only, network-first with cache fallback.
-const C = 'cinemash-v4';
+const C = 'cinemash-v5';
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(C).then(c => c.addAll(['./cinemash.html'])).catch(() => {}));
   self.skipWaiting();
