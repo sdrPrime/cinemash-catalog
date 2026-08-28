@@ -10,7 +10,7 @@
     "standalone",
     "minimal-ui"
   ],
-  "orientation": "portrait",
+  "orientation": "portrait-primary",
   "dir": "ltr",
   "lang": "en",
   "categories": [
